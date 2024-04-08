@@ -1,0 +1,47 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+# ... (기존 코드 유지)
+
+# ... (기존 코드 유지)
+
+# ... (기존 코드 유지)
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Git user
+      run: |
+        git config --global user.email "thdckdtjr8@gmail.com"
+        git config --global user.name "xoxlo"
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+    - name: Run Update Python Script 
+      run: |
+        python utils/check_files.py
+    - name: Check for changes in README.md
+      id: check_readme_changes
+      run: |
+        git diff --exit-code || echo "README.md has changes"
+    - name: Run Update README.md File
+      if: steps.check_readme_changes.outputs.return-code == '0'
+      run: |
+        git add .
+        git diff --cached --quiet || git commit -m "Automatically Update README.md file" && git push
