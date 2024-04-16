@@ -5,7 +5,7 @@ def get_file_list_prac():
     return file_list
   
 def make_info_prac(file_list):
-    info = f"## 중간고사 정리\n\n"
+    info = f"## 공부 정리\n\n"
     for file in file_list:
         temp = f"- [{file}](https://github.com/xoxlo/computer_network/tree/main/중간고사/{file})\n"
         info += temp
@@ -16,7 +16,7 @@ def make_read_me(info):
     
 # 컴퓨터 네트워크1
 
-중간고사, 기말고사 정리
+공부 정리
 
 {info}
 """
