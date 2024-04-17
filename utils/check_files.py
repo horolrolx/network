@@ -31,7 +31,7 @@ def get_file_list_3():
 def make_info_3(file_list):
     info = f"## 컴퓨터 네트워크 중간고사 예상 문제\n\n"
     for file in file_list:
-        temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/computer_network/중간고사%20예상%20문제/{file})\n"
+        temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/computer_network/중간고사 예상 문제/{file})\n"
         info += temp
     return info
 
@@ -43,7 +43,7 @@ def get_file_list_4():
 def make_info_4(file_list):
     info = f"## 네트워크 특론 중간고사 예상 문제\n\n"
     for file in file_list:
-        temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/network_specialism/중간고사%20예상%20문제/{file})\n"
+            temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/network_specialism/중간고사 예상 문제/{file})\n"
         info += temp
     return info
   
