@@ -36,7 +36,7 @@ def make_info_3(file_list):
     return info
 
 def get_file_list_4():
-    file_list = [file for file in os.listdir("./computer_specialism/중간고사 예상 문제/") if '.md' in file]
+    file_list = [file for file in os.listdir("./network_specialism/중간고사 예상 문제/") if '.md' in file]
     file_list = sorted(file_list)
     return file_list
   
