@@ -24,34 +24,33 @@ def make_info_2(file_list):
     return info
 
 def get_file_list_3():
-    file_list = [file for file in os.listdir("./computer_network/중간고사_예상_문제/") if '.md' in file]
+    file_list = [file for file in os.listdir("./computer_network/컴퓨터네트워크_중간고사_예상_문제/") if '.md' in file]
     file_list = sorted(file_list)
     return file_list
   
 def make_info_3(file_list):
     info = f"## 컴퓨터 네트워크 중간고사 예상 문제\n\n"
     for file in file_list:
-        temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/computer_network/중간고사_예상_문제/{file})\n"
+        temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/computer_network/컴퓨터네트워크_중간고사_예상_문제/{file})\n"
         info += temp
     return info
 
 def get_file_list_4():
-    file_list = [file for file in os.listdir("./network_specialism/중간고사_예상_문제/") if '.md' in file]
+    file_list = [file for file in os.listdir("./network_specialism/네트워크특론_중간고사_예상_문제/") if '.md' in file]
     file_list = sorted(file_list)
     return file_list
   
 def make_info_4(file_list):
     info = f"## 네트워크 특론 중간고사 예상 문제\n\n"
     for file in file_list:
-            temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/network_specialism/중간고사_예상_문제/{file})\n"
+            temp = f"- [{file}](https://github.com/xoxlo/network/tree/main/network_specialism/네트워크특론_중간고사_예상_문제/{file})\n"
             info += temp
     return info
   
 def make_read_me(info):
     return f"""
     
-# 컴퓨터 네트워크
-# 네트워크 특론
+# 컴퓨터 네트워크, 네트워크 특론
 
 
 {info}
